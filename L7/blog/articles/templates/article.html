@@ -1,0 +1,26 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="icon" href="{{ STATIC_URL }}/static/img/1.ico/">
+        <title>Архив статей по ссылке</title>
+        <link rel="stylesheet" href="{% static 'css/article.css' %}" />
+    </head>
+</html>
+<body>
+    <div>
+        <img src="https://1000logos.net/wp-content/uploads/2017/03/McDonalds-Logo-1993-2048x1152.png" alt="Эмблема" width="150" height="40" style="float: center;" />
+        <h2 style="float:right;"> <a href="http://127.0.0.1:8000/" style="color:rgb(255, 255, 255)" >ВСЕ ЗАПИСИ</a> </h2>
+    </div>
+    <div class="archive"
+    >
+            <div class="one-post">
+                <h2 class="post-title">{{ post.title }}</h2>
+                <div class="article-info">
+                    <div class="article-author">{{ post.author.username }}</div>
+                    <div class="article-created-date">{{ post.created_date }}</div>
+                </div>
+                <p> {{ post.text }} </p>
+            </div>
+    </div>
+</body>
